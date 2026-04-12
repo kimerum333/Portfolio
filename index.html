@@ -5,7 +5,6 @@
     <title>김성구 | Backend Engineer</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <style>
-        /* --- 1. 디자인 시스템 변수 --- */
         :root {
             --primary-blue: #2B6CB0;
             --light-blue-bg: #EBF8FF;
@@ -15,7 +14,6 @@
             --badge-bg: #F8FAFC;
         }
 
-        /* --- 2. 기본 초기화 --- */
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +28,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- 3. A4 규격 레이아웃 (공통) --- */
         .page {
             width: 210mm;
             height: 297mm;
@@ -47,7 +44,6 @@
             page-break-after: auto;
         }
 
-        /* --- 4. [Page 1] Profile (웅장한 여백) --- */
         .page-profile {
             padding: 25mm 22mm;
         }
@@ -69,7 +65,7 @@
             background: var(--light-blue-bg);
             padding: 12mm 15mm;
             border-radius: 8px;
-            font-size: 14.5pt;
+            font-size: 13pt;
             margin-bottom: 18mm;
             line-height: 1.8;
         }
@@ -111,7 +107,6 @@
 
         .page-profile .pillar-list strong { color: var(--primary-blue); font-size: 11.5pt; display: inline-block; margin-bottom: 5px; }
 
-        /* --- 5. [Page 2] Projects (고밀도 압축 레이아웃) --- */
         .page-projects {
             padding: 18mm 18mm;
         }
@@ -179,19 +174,19 @@
             margin-bottom: 0 !important;
         }
 
-        /* --- 6. 공통 푸터 스타일 --- */
         .contact-footer {
             border-top: 1px solid var(--border);
             padding-top: 8mm;
-            margin-top: auto; /* 💡 여백이 남을 경우 바닥으로 밀어줌 */
+            margin-top: auto;
             text-align: center;
             font-size: 10.5pt;
             color: #718096;
         }
 
         .contact-footer p { margin: 1mm 0; }
+        .contact-footer a { color: inherit; text-decoration: none; }
+        .contact-footer a:hover { color: var(--primary-blue); }
 
-        /* --- 7. 인쇄 및 PDF 저장 설정 --- */
         @media print {
             body { background: none; }
             .page { margin: 0; box-shadow: none; border: none; }
@@ -206,7 +201,7 @@
         <header class="main-header">
             <div class="header-left">
                 <h1 class="name">김성구</h1>
-                <div class="role-badge">Back-end Engineer (1년)</div>
+                <div class="role-badge">Back-end Engineer</div>
             </div>
             <div class="header-right bio-info">
                 <p>한국외국어대학교 졸업 (일본어 전공)</p>
@@ -216,8 +211,9 @@
         </header>
 
         <div class="summary-section">
-            <p>"대규모 금융 레거시의 기술 부채를 해결하는 <strong>집요함</strong>과,<br>
-                최신 AI 스택을 빠르게 프로토타이핑하는 <strong>속도</strong>를 동시에 갖췄습니다."</p>
+            <p>일본어 전공으로 시작해 백엔드 개발자가 됐습니다.<br>
+            첫 직장에서 코어뱅킹 솔루션을 유지보수하며 실무를 익혔고, SVN→Git 이관과 프론트엔드 리팩터링을 주도했습니다.<br>
+            이후 FastAPI·LangGraph·Qdrant로 RAG 챗봇을 1인 풀스택 설계·배포하며 AI 백엔드로 방향을 잡았습니다.</p>
         </div>
 
         <div class="pillar-container">
@@ -247,8 +243,8 @@
         </div>
 
         <footer class="contact-footer">
-            <p>Email: kimerum333@email.com | Mobile: 010-7743-3465</p>
-            <p>GitHub: github.com/kimerum333</p>
+            <p>Email: <a href="mailto:kimerum333@gmail.com">kimerum333@gmail.com</a> | Mobile: 010-7743-3465</p>
+            <p>GitHub: <a href="https://github.com/kimerum333" target="_blank">github.com/kimerum333</a></p>
         </footer>
     </section>
 
@@ -330,8 +326,8 @@
         </div>
 
         <footer class="contact-footer">
-            <p>Email: kimerum333@email.com | Mobile: 010-7743-3465</p>
-            <p>GitHub: github.com/kimerum333</p>
+            <p>Email: <a href="mailto:kimerum333@gmail.com">kimerum333@gmail.com</a> | Mobile: 010-7743-3465</p>
+            <p>GitHub: <a href="https://github.com/kimerum333" target="_blank">github.com/kimerum333</a></p>
         </footer>
     </section>
 </body>
