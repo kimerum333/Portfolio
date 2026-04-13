@@ -259,22 +259,22 @@
                 <div class="card-header">
                     <div class="header-top">
                         <span class="project-tag">AI / RAG</span>
-                        <a href="https://github.com/Vic-Med-MCP/DoctorKim" class="repo-link" target="_blank">Repository ↗</a>
+                        <a href="https://github.com/kimerum333/doctor-kim-retrospective" class="repo-link" target="_blank">Case Study ↗</a>
                     </div>
                     <h2 class="project-title">의료 지식 기반 RAG 프로토타입 "Doctor Kim"</h2>
-                    <p class="project-period">2025.07 - 2025.10 (1인 프로젝트)</p>
+                    <p class="project-period">2025.07 - 2025.09 (1인 프로젝트)</p>
                 </div>
                 <div class="project-overview">
-                    <p>공공 의료 데이터를 활용하여 사용자의 일상어 증상 질문에 답변을 제공하는 AI 지식 상담 서비스 PoC</p>
+                    <p>공공 의료 데이터(AI Hub)를 벡터 DB에 적재하고 LangGraph 에이전트가 RAG 도구를 호출해 의료 질문에 답하는 챗봇 프로토타입. 기획부터 배포까지 1인 수행.</p>
                 </div>
                 <div class="tech-stack">
-                    <span>FastAPI</span> <span>SQLAlchemy</span> <span>MySQL</span> <span>LangGraph</span>
-                    <span>Qdrant</span> <span>React</span> <span>Docker</span> <span>Celery</span>
+                    <span>FastAPI</span> <span>LangGraph</span> <span>LlamaIndex</span> <span>Qdrant</span>
+                    <span>Celery</span> <span>Redis</span> <span>MariaDB</span> <span>Docker</span> <span>React</span>
                 </div>
                 <div class="card-body">
-                    <p><strong>Challenge & Action:</strong> SQLAlchemy를 활용한 DB 모델링 및 회원 관리 시스템을 포함한 전체 백엔드 설계. LangGraph를 도입하여 대화 상태를 유지하며 벡터 DB 툴 호출을 제어하는 워크플로우를 구축하고, Celery 비동기 처리로 시스템 응답성 확보.</p>
+                    <p><strong>Challenge & Action:</strong> FastAPI 기반 백엔드와 JWT 인증, LangGraph를 활용한 상태 기반 대화 흐름, MCP(JSON-RPC) 프로토콜로 노출된 RAG 서버까지 8개 서비스를 Docker Compose로 구성. Celery 워커에서 LangGraph의 비동기 호출을 안정적으로 처리하기 위해 <strong>장기 실행 이벤트 루프 + `run_coroutine_threadsafe` 패턴</strong>을 설계·구현.</p>
                     <div class="insight-box">
-                        <p>사용자의 일상어 증상 표현과 데이터셋의 전문 의학 용어 간 괴리로 인해 검색 품질이 저하되는 현상을 포착. 단순히 벡터 검색 기능을 구현하는 것을 넘어, 질문 의도에 맞는 용어 치환 및 도메인 특화 데이터 정제가 핵심임을 경험적으로 파악한 실패 케이스.</p>
+                        <p>의료 도메인 비전문가로서 데이터 품질을 평가할 수 없는 한계, 오픈소스 임베딩 모델의 시맨틱 갭, Celery의 동기 모델과 async 라이브러리의 구조적 충돌 등 프로젝트의 실패 원인을 구조적으로 분석한 기술 회고를 별도 문서로 정리. 코드는 이전 인턴 기간 중 작성되어 비공개이며, 회고 문서 링크에서 상세 내용 확인 가능.</p>
                     </div>
                 </div>
             </article>
