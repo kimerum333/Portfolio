@@ -272,7 +272,7 @@
                     <span>Celery</span> <span>Redis</span> <span>MariaDB</span> <span>Docker</span> <span>React</span>
                 </div>
                 <div class="card-body">
-                    <p><strong>Challenge & Action:</strong> FastAPI 기반 백엔드와 JWT 인증, LangGraph를 활용한 상태 기반 대화 흐름, MCP(JSON-RPC) 프로토콜로 노출된 RAG 서버까지 8개 서비스를 Docker Compose로 구성. Celery 워커에서 LangGraph의 비동기 호출을 안정적으로 처리하기 위해 <strong>장기 실행 이벤트 루프 + `run_coroutine_threadsafe` 패턴</strong>을 설계·구현.</p>
+                    <p><strong>Challenge & Action:</strong> FastAPI 기반 백엔드와 JWT 인증, LangGraph를 활용한 상태 기반 대화 흐름, MCP(JSON-RPC) 프로토콜로 노출된 RAG 서버까지 8개 서비스를 Docker Compose로 구성. Celery 워커에서 LangGraph의 비동기 호출을 안정적으로 처리하기 위해 장기 실행 이벤트 루프 + `run_coroutine_threadsafe` 패턴을 설계·구현.</p>
                     <div class="insight-box">
                         <p>의료 도메인 비전문가로서 데이터 품질을 평가할 수 없는 한계, 오픈소스 임베딩 모델의 시맨틱 갭, Celery의 동기 모델과 async 라이브러리의 구조적 충돌 등 프로젝트의 실패 원인을 구조적으로 분석한 기술 회고를 별도 문서로 정리. 코드는 이전 인턴 기간 중 작성되어 비공개이며, 회고 문서 링크에서 상세 내용 확인 가능.</p>
                     </div>
